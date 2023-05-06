@@ -27,7 +27,6 @@ export interface Page extends PageDes {
 async function query() {
 	try {
 		const pagesDescptions = (await httpService.get(BASE_URL)) as PageDes[]
-		console.log('pagesDescptions:', pagesDescptions)
 		return _setPagesData(pagesDescptions)
 	} catch (error) {
 		_handleError(error, 'Cannot get pages')

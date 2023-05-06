@@ -6,19 +6,12 @@ import { HiViewGridAdd } from 'react-icons/hi'
 import { AiFillCheckCircle, AiFillEdit, AiFillHome } from 'react-icons/ai'
 import { lazy } from 'react'
 import { AppLogo } from './AppLogo'
-import '../styles/cmps/AppHeader.scss'
 import { pagesAtom } from '../store/pages.atom'
+import '../styles/cmps/AppHeader.scss'
 
 const AddPageModal = lazy(() => import('./AddPageModal'))
 
 export default function AppHeader() {
-	// const [dashboardInEdit, setDashInEdit] = useAtom(dashboardInEditAtom)
-	// const userPages = useAtomValue(pagesAtom)
-	// const openModal = useSetAtom(openModalAtom)
-	// const location = useLocation()
-
-	// const inDashboardPage = location.pathname === '/'
-
 	return (
 		<header className="flex align-center space-between app-header">
 			<Link
@@ -28,43 +21,6 @@ export default function AppHeader() {
 			</Link>
 			<div className="btn-container">
 				<HeaderBtns/>
-				{/* {inDashboardPage ? (
-					<>
-						{dashboardInEdit ? (
-							<div className="flex align-center dash-edit-btns">
-								<button
-									className="btn btn-svg btn-add"
-									title="Add Aplication"
-									onClick={() => openModal(AddPageModal)}>
-									<HiViewGridAdd size="18px" />
-								</button>
-								<button
-									className={`btn btn-svg btn-edit ${
-										userPages.length === 0 ? 'btn-animation' : ''
-									}`}
-									title={dashboardInEdit ? 'Done' : 'Edit'}
-									onClick={() => setDashInEdit(!dashboardInEdit)}>
-									{dashboardInEdit ? <AiFillCheckCircle size="18px" /> : <AiFillEdit size="18px" />}
-								</button>
-							</div>
-						) : (
-							<button
-								className={`btn btn-svg btn-edit ${userPages.length === 0 ? 'btn-animation' : ''}`}
-								title={dashboardInEdit ? 'Done' : 'Edit'}
-								onClick={() => setDashInEdit(!dashboardInEdit)}>
-								{dashboardInEdit ? <AiFillCheckCircle size="18px" /> : <AiFillEdit size="18px" />}
-							</button>
-						)}
-					</>
-				) : (
-					<Link
-						className="nav-link"
-						to="/">
-						<div className="btn btn-svg">
-							<AiFillHome size="18px" />
-						</div>
-					</Link>
-				)} */}
 			</div>
 		</header>
 	)

@@ -1,4 +1,3 @@
-// storage service for demo pages
 export const storageService = {
 	query,
 	get,
@@ -8,11 +7,13 @@ export const storageService = {
 	postMany
 }
 
+//? async storage service for mock server API calls
+
 type EntityType = 'articles' | 'contacts' | 'todos'
 interface Entity extends Object {
 	_id: string
 }
-
+//? set a delay for data retrive        👇
 function query(entityType: EntityType, delay = 50): Promise<Entity[]> {
 	var entities = JSON.parse(localStorage.getItem(entityType)!) || []
 

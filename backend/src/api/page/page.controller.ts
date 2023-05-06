@@ -5,7 +5,6 @@ import logger from '../../services/logger.service.js'
 
 export { getPages, addPage, updatePage, removePage }
 
-//? GET LIST
 async function getPages(_req: Request, res: Response) {
 	try {
 		logger.debug('Getting Pages')
@@ -17,7 +16,6 @@ async function getPages(_req: Request, res: Response) {
 	}
 }
 
-//? CREATE
 async function addPage(req: Request, res: Response) {
 	try {
 		logger.debug('Adding Page')
@@ -30,7 +28,6 @@ async function addPage(req: Request, res: Response) {
 	}
 }
 
-//? UPDATE
 async function updatePage(req: Request, res: Response) {
 	try {
 		logger.debug('Updating Page')
@@ -43,7 +40,6 @@ async function updatePage(req: Request, res: Response) {
 	}
 }
 
-//? DELETE
 async function removePage(req: Request, res: Response) {
 	try {
 		logger.debug('Deleting Page')

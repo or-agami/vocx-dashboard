@@ -5,7 +5,6 @@ import { Page } from '../models/page.js'
 
 //? var for init and store db connection
 var db: Low<Data>
-//? DB name
 const dbName = 'dash_pages_db'
 
 type Data = {

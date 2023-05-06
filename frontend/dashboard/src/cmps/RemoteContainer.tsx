@@ -42,7 +42,7 @@ export default ({ cmpName: remoteName, remotePath, mount }: Props) => {
 
 	const isFirstRunRef = useRef(true)
 	const unmountRef = useRef(() => {})
-	// Mount app1 MFE
+	//? Mount remote MFE
 	useEffect(() => {
 		if (!isFirstRunRef.current) {
 			return

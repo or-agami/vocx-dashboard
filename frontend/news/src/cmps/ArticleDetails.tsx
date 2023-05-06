@@ -9,7 +9,6 @@ export default function ArticleDetails() {
 	const [article, setArticle] = useState<NewsArticle>()
 
 	useEffect(() => {
-		console.log('entered useEffet! from ArticleDetails:') // DeleteMe
 		if (!article) fetchData()
 	}, [])
 
@@ -19,7 +18,6 @@ export default function ArticleDetails() {
 		setArticle(data)
 	}
 
-	// Todo(low): loader
 	if (!article) return <h1>Loading..</h1>
 	return (
 		<article className="flex-column article-details">

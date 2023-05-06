@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { NewsArticle, newsService } from '../news.service'
 
 export default function NewsList({ category = 'new' }: { category?: 'saved' | 'new' | 'hot' }) {
-	const savedIds = ['12345', '24680'] //? Demo of saved articles
+	const savedIds = ['12345', '24680'] //? Demo of saved articles id
 
 	const [articles, setArticles] = useState<NewsArticle[]>([])
 
@@ -31,7 +31,6 @@ export default function NewsList({ category = 'new' }: { category?: 'saved' | 'n
 		}
 	}
 
-	// Todo(low): loader
 	return (
 		<div className="news-list">
 			<ul>

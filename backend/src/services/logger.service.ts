@@ -1,6 +1,4 @@
 import fs from 'fs'
-// import asyncLocalStorage from './als.service.js'
-// const utilService = require('./util.service')
 
 type Level = 'DEBUG' | 'INFO' | 'WARN' | 'ERROR'
 
