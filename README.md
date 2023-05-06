@@ -10,9 +10,8 @@ With the dashboard you can access all the apps in one convenient location.
 The host is the only component responsible for updating browser url. The two level of history strategies (browser + in-memory) are kept in sync through an event-based communication between host and remotes.
 
 
-# Running locally
+# Installation & Usage
 
-## Installation & Usage
 ```
 git clone https://github.com/or-agami/vocx-dashboard/tree/main
 ```
@@ -35,9 +34,9 @@ yarn start
 
 > - http://localhost:3000 Dashboard(host)
 > - Also as standalone apps:
->   - http://localhost:3001 contacts
->   - http://localhost:3002 news
->   - http://localhost:3003 todo
+>   - http://localhost:3001 Contacts
+>   - http://localhost:3002 News
+>   - http://localhost:3003 Todo
 
 
 # Developing a New Page (app)
