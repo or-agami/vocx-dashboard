@@ -1,0 +1,24 @@
+.total-stat {
+  background-color: #36363b;
+  width: fit-content;
+  border-radius: 16px;
+  gap: 20px;
+  padding-block: 20px;
+  padding-inline: 20px 40px;
+
+  .svg-icon-container {
+    padding: 20px;
+    border-radius: 50%;
+  }
+
+  .content {
+    .value {
+      color: #d9dde2;
+    }
+
+    .title {
+      font-weight: 600;
+      color: #9fa4ad;
+    }
+  }
+}

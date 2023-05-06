@@ -1,0 +1,43 @@
+.add-page-modal {
+  .title {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  .description {
+    color: #c1c2c5;
+    margin-bottom: 60px;
+  }
+
+  .available-pages {
+    gap: 20px;
+
+    .no-pages {
+      color: #f5a843;
+    }
+
+    .btn-add-page {
+      border: 1px solid #373a40;
+      padding: 14px 26px;
+      border-radius: 16px;
+      background-color: #1a1b1e;
+      transition: background-color .2s ease-out;
+      min-height: 122px;
+
+      .img-container {
+        width: 60px;
+        margin-bottom: 8px;
+        margin-block: auto;
+      }
+
+      .page-name {
+        margin-top: 10px;
+      }
+
+      &:hover {
+        background-color: #2e3036;
+      }
+    }
+  }
+}

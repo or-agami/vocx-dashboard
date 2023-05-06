@@ -1,0 +1,74 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu';
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+	background-color: #1a1b1e;
+	color: #fbf5eb;
+	height: 100%;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: inherit;
+	margin: 0;
+}
+
+input,
+select,
+option {
+	font-family: inherit;
+}
+
+p {
+	margin: 0;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+	padding: 0;
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	cursor: pointer;
+}
+
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+}
+
+svg {
+	color: currentColor;
+}
+
+.main-layout {
+	display: grid;
+	grid-template-rows: 60px calc(100vh - 60px);
+}

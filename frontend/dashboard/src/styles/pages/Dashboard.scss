@@ -1,0 +1,22 @@
+.dashboard {
+  padding: 40px 30px;
+
+  .app-list {
+    gap: 20px;
+    width: fit-content;
+    margin-inline: auto;
+    flex-wrap: wrap;
+  }
+
+  .no-pages {
+    text-align: center;
+
+    .title {
+      margin-bottom: 10px;
+    }
+
+    .description {
+      color: #c1c2c5;
+    }
+  }
+}
