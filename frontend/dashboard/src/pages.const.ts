@@ -14,7 +14,7 @@ export const availablePages: Page[] = [
 		cmpName: 'contacts',
 		cmp: RemoteContainer,
 		mount: contactMount,
-		description: 'description placeholder for contacts'
+		description: 'Simple demo app for contact management'
 	},
 	{
 		name: 'News',
@@ -23,7 +23,7 @@ export const availablePages: Page[] = [
 		cmpName: 'news',
 		cmp: RemoteContainer,
 		mount: newsMount,
-		description: 'description placeholder for news'
+		description: 'Simple demo app for news aggregator'
 	},
 	{
 		name: 'Todo',
@@ -32,6 +32,6 @@ export const availablePages: Page[] = [
 		cmpName: 'todo',
 		cmp: RemoteContainer,
 		mount: todoMount,
-		description: 'description placeholder for todo'
+		description: 'Simple Todos demo app'
 	}
 ]
