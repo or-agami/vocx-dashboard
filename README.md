@@ -2,13 +2,12 @@
 
 Simplify the management of your internal pages (apps) a sleek dashboard that puts all the internal pages at your fingertips.
 With the dashboard you can access all the apps in one convenient location.
-[Module Federation](https://webpack.js.org/concepts/module-federation/) and [Dynamic Remote Containers](;https://webpack.js.org/concepts/module-federation/#dynamic-remote-containers) makes it easy to develop and integrate new pages
+[Module Federation](https://webpack.js.org/concepts/module-federation/) and [Dynamic Remote Containers](https://webpack.js.org/concepts/module-federation/#dynamic-remote-containers) makes it easy to develop and integrate new pages
 
 - `contacts`, `news` & `todo`: apps using a browser history strategy when acting as hosts and an in-memory history strategy when acting as remotes.
 - `dashboard`: host app based on a browser history strategy that handles high-level routing. `dashboard` routing determines mounting/unmounting of `news`, `contacts` and `todo` remotes.
 
 The host is the only component responsible for updating browser url. The two level of history strategies (browser + in-memory) are kept in sync through an event-based communication between host and remotes.
-
 
 # Installation & Usage
 
@@ -17,15 +16,19 @@ git clone https://github.com/or-agami/vocx-dashboard/tree/main
 ```
 
 ## Backend
+
 ```
 cd backend
 yarn install
 yarn run dev
 ```
+
 > Server will run on port `3030`
 
 ## Frontend
+
 > Thanks to [Lerna](https://lerna.js.org/) `yarn start` starts all the sub packages in frontend folder
+
 ```
 cd frontend
 yarn install
@@ -37,7 +40,6 @@ yarn start
 >   - http://localhost:3001 Contacts
 >   - http://localhost:3002 News
 >   - http://localhost:3003 Todo
-
 
 # Developing a New Page (app)
 

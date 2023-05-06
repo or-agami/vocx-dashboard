@@ -8,17 +8,17 @@ Simple demo app for contact management
 2. Open contacts folder
 3. Install the dependencies
 4. Start development server
-   ```
-   git clone https://github.com/or-agami/vocx-dashboard/tree/main
-   cd contacts
-   yarn install
-   yarn start
-   ```
+```
+git clone https://github.com/or-agami/vocx-dashboard/tree/main
+cd contacts
+yarn install
+yarn start
+```
 
 > Open your web browser and go to http://localhost:3001/
 
 ## Technologies Used
 
-- React
-- SASS
-- TypeScript
+- [React](https://react.dev/)
+- [SASS](https://sass-lang.com/)
+- [TypeScript](https://www.typescriptlang.org/)
