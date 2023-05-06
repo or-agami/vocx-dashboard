@@ -1,6 +1,6 @@
 # VocX Dashboard
 
-Simplify the management of your internal pages (apps) a sleek dashboard that puts all the internal pages at your fingertips.
+Simplify the management of your internal pages (apps) with a sleek dashboard that puts all the internal pages at your fingertips.
 With the dashboard you can access all the apps in one convenient location.
 [Module Federation](https://webpack.js.org/concepts/module-federation/) and [Dynamic Remote Containers](https://webpack.js.org/concepts/module-federation/#dynamic-remote-containers) makes it easy to develop and integrate new pages
 
