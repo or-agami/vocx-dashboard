@@ -1,9 +1,11 @@
-import React, { lazy } from 'react'
+import React, { Suspense, lazy } from 'react'
 import { Layout } from '../cmps/Layout'
 import { Todo } from '../types'
+import { RouteObject } from 'react-router-dom'
 
 const Home = lazy(() => import('../cmps/Home'))
 const TodoList = lazy(() => import('../cmps/TodoList'))
+const ErrorPage = lazy(() => import('../cmps/ErrorPage'))
 
 //? Demo Data
 const todos: Todo[] = [
@@ -33,10 +35,15 @@ const todos: Todo[] = [
 	}
 ]
 
-export const routes = [
+export const routes: RouteObject[] = [
 	{
 		path: '/',
 		element: <Layout />,
+		errorElement: (
+			<Suspense>
+				<ErrorPage />
+			</Suspense>
+		),
 		children: [
 			{
 				index: true,
