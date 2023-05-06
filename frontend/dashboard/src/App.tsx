@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Router } from './routing/Router'
-import { pagesAtom } from './atom/pages.atom'
+import { pagesAtom } from './store/pages.atom'
 import { useAtom } from 'jotai'
 import { Page, pagesService } from './services/pages.service'
 import './styles/style.scss'

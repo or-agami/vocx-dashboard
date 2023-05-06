@@ -5,7 +5,7 @@ import {
 	createBrowserRouter,
 	createRoutesFromElements
 } from 'react-router-dom'
-import { pagesAtom } from '../atom/pages.atom'
+import { pagesAtom } from '../store/pages.atom'
 import { useAtomValue } from 'jotai'
 import { Layout } from '../cmps/Layout'
 import ErrorPage from '../pages/ErrorPage'

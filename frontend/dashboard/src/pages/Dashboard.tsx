@@ -1,7 +1,7 @@
 import React from 'react'
 import { useAtomValue } from 'jotai'
 import DashApp from '../cmps/DashApp'
-import { pagesAtom } from '../atom/pages.atom'
+import { pagesAtom } from '../store/pages.atom'
 import '../styles/pages/Dashboard.scss'
 
 export default function Dashboard() {

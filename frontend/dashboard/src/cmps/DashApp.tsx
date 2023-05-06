@@ -2,9 +2,9 @@ import React from 'react'
 import { useAtomValue, useSetAtom } from 'jotai'
 import { pagesService, type Page } from '../services/pages.service'
 import { Link } from 'react-router-dom'
-import { dashboardInEditAtom } from '../atom/event.atom'
+import { dashboardInEditAtom } from '../store/event.atom'
 import { FaTrash } from 'react-icons/fa'
-import { pagesAtom } from '../atom/pages.atom'
+import { pagesAtom } from '../store/pages.atom'
 import '../styles/cmps/DashApp.scss'
 
 export default function DashApp({ app }: { app: Page }) {

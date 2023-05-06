@@ -1,6 +1,6 @@
 import React from 'react'
 import { useAtomValue, useSetAtom } from 'jotai'
-import { pagesAtom, pagesToAddAtom } from '../atom/pages.atom'
+import { pagesAtom, pagesToAddAtom } from '../store/pages.atom'
 import { pagesService, type Page } from '../services/pages.service'
 import '../styles/cmps/AddPageModal.scss'
 

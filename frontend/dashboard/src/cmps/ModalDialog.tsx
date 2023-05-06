@@ -1,6 +1,6 @@
 import React from 'react'
 import { useAtom } from 'jotai'
-import { openModalAtom } from '../atom/event.atom'
+import { openModalAtom } from '../store/event.atom'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import useOnClickOutside from '../hooks/useOnClickOutside'
 import { type LazyExoticComponent, Suspense, useRef } from 'react'
@@ -22,6 +22,7 @@ export default function ModalDialog() {
 				className="modal-dialog">
 				<button
 					className="btn btn-svg btn-close"
+					title="C;lose"
 					onClick={() => setModal('none')}>
 					<AiFillCloseCircle size="18px" />
 				</button>
