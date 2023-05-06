@@ -13,7 +13,7 @@ interface Entity extends Object {
 	_id: string
 }
 
-function query(entityType: EntityType, delay = 100): Promise<Entity[]> {
+function query(entityType: EntityType, delay = 50): Promise<Entity[]> {
 	var entities = JSON.parse(localStorage.getItem(entityType)!) || []
 
 	return new Promise((resolve, _reject) => {

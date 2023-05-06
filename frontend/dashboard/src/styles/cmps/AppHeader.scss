@@ -5,4 +5,22 @@
 	.dash-edit-btns {
 		gap: 10px;
 	}
+
+	.btn {
+		transition: color .4s ease-out;
+	}
+
+	.btn-animation {
+		animation: breathing 1.6s ease-out infinite;
+	}
+}
+
+@keyframes breathing {
+	0% {}
+
+	50% {
+		color: #00a8e2;
+	}
+
+	100% {}
 }

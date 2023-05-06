@@ -45,9 +45,9 @@
 	background-color: #202123;
 	color: #c1c2c5;
 	transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
 
-	&:hover {
-		background-color: #2e3036;
-		color: inherit;
-	}
+.btn-svg:hover {
+	background-color: #2e3036;
+	color: inherit;
 }

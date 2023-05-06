@@ -3,7 +3,6 @@ import { Layout } from '../cmps/Layout'
 
 const Home = lazy(() => import('../cmps/Home'))
 const ContactList = lazy(() => import('../cmps/ContactList'))
-const ContactDetails = lazy(() => import('../cmps/ContactDetails'))
 
 export const routes = [
 	{
@@ -17,10 +16,6 @@ export const routes = [
 			{
 				path: 'my-contacts',
 				element: <ContactList />
-			},
-			{
-				path: 'my-contacts/:contactId',
-				element: <ContactDetails />
 			}
 		]
 	}

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { Contact } from '../types'
 
 export default function ContactList() {
@@ -18,21 +17,19 @@ export default function ContactList() {
 
 function ContactPreview({ contact }: { contact: Contact }) {
 	return (
-		<Link to={contact._id}>
-			<div className="flex align-center contact-preview">
-				<div className="img-container">
-					<img
-						className="profile-img"
-						src={`https://robohash.org/${contact._id}?set=set5`}
-						alt="User profile"
-					/>
-				</div>
-				<div className="contact-info">
-					<h1 className="name">{contact.name}</h1>
-					<span className="number">{contact.phone}</span>
-				</div>
+		<div className="flex align-center contact-preview">
+			<div className="img-container">
+				<img
+					className="profile-img"
+					src={`https://robohash.org/${contact._id}?set=set5`}
+					alt="User profile"
+				/>
 			</div>
-		</Link>
+			<div className="contact-info">
+				<h1 className="name">{contact.name}</h1>
+				<span className="number">{contact.phone}</span>
+			</div>
+		</div>
 	)
 }
 
