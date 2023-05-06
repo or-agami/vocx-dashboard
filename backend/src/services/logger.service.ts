@@ -26,7 +26,7 @@ if (!fs.existsSync(logsDir)) {
 
 //? define the time format
 function getTime() {
-	let now = new Date()
+	const now = new Date()
 	return now.toLocaleString('he')
 }
 
@@ -39,7 +39,7 @@ function doLog(level: Level, ...args: string[]) {
 		typeof arg === 'string' || isError(arg) ? arg : JSON.stringify(arg)
 	)
 
-	var line = strs.join(' | ')
+	let line = strs.join(' | ')
 	line = `${getTime()} - ${level} - ${line}\n`
 	console.log(line)
 	fs.appendFile('./logs/backend.log', line, (err: any) => {

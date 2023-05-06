@@ -15,7 +15,7 @@ interface Entity extends Object {
 }
 //? set a delay for data retrive        👇
 function query(entityType: EntityType, delay = 50): Promise<Entity[]> {
-	var entities = JSON.parse(localStorage.getItem(entityType)!) || []
+	const entities = JSON.parse(localStorage.getItem(entityType)!) || []
 
 	return new Promise((resolve, _reject) => {
 		setTimeout(() => resolve(entities), delay)
@@ -64,9 +64,9 @@ function _save(entityType: EntityType, entities: Entity[]) {
 }
 
 function _makeId(length = 5) {
-	var text = ''
-	var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-	for (var i = 0; i < length; i++) {
+	let text = ''
+	const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+	for (let i = 0; i < length; i++) {
 		text += possible.charAt(Math.floor(Math.random() * possible.length))
 	}
 	return text
