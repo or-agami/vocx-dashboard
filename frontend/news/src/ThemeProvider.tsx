@@ -2,4 +2,6 @@ import React from 'react'
 import './style.css'
 import './helpers.css'
 
-export const ThemeProvider = () => (<></>)
+export default function ThemeProvider() {
+	return <></>
+}

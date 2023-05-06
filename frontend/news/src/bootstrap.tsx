@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import { createRoot } from 'react-dom/client'
 import { RouterProvider } from 'react-router-dom'
 import { createRouter } from './routing/router-factory'
 import { RoutingStrategy } from './types'
-import { ThemeProvider } from './ThemeProvider'
 import './index.scss'
+
+const ThemeProvider = lazy(() => import('./ThemeProvider'))
 
 type Props = {
 	mountPoint: HTMLElement
@@ -18,7 +19,11 @@ const mount = ({ mountPoint, initialPathname, routingStrategy }: Props) => {
 	root.render(
 		<>
 			<RouterProvider router={router} />
-			{routingStrategy === 'browser' && <ThemeProvider />}
+			{routingStrategy === 'browser' && (
+				<Suspense>
+					<ThemeProvider />
+				</Suspense>
+			)}
 		</>
 	)
 
