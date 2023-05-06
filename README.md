@@ -9,16 +9,15 @@ With the dashboard you can access all the apps in one convenient location.
 
 The host is the only component responsible for updating browser url. The two level of history strategies (browser + in-memory) are kept in sync through an event-based communication between host and remotes.
 
-<br>
 
 # Running locally
 
-## Installation & Usage:
+## Installation & Usage
 ```
 git clone https://github.com/or-agami/vocx-dashboard/tree/main
 ```
 
-## Backend:
+## Backend
 ```
 cd backend
 yarn install
@@ -26,7 +25,7 @@ yarn run dev
 ```
 > Server will run on port `3030`
 
-## Frontend:
+## Frontend
 > Thanks to [Lerna](https://lerna.js.org/) `yarn start` starts all the sub packages in frontend folder
 ```
 cd frontend
@@ -40,7 +39,6 @@ yarn start
 >   - http://localhost:3002 news
 >   - http://localhost:3003 todo
 
-<br>
 
 # Developing a New Page (app)
 
