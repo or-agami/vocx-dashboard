@@ -1,9 +1,9 @@
 import React from 'react'
 import { useAtom, useSetAtom } from 'jotai'
 import { Link, useLocation } from 'react-router-dom'
-import { dashboardInEditAtom, openModalAtom } from '../atom/event.atom'
+import { dashboardInEditAtom, openModalAtom } from '../store/event.atom'
 import { HiViewGridAdd } from 'react-icons/hi'
-import { AiFillCheckCircle, AiFillEdit } from 'react-icons/ai'
+import { AiFillCheckCircle, AiFillEdit, AiFillHome } from 'react-icons/ai'
 import { lazy } from 'react'
 import { AppLogo } from './AppLogo'
 import '../styles/cmps/AppHeader.scss'
@@ -19,28 +19,36 @@ export default function AppHeader() {
 
 	return (
 		<header className="flex align-center space-between app-header">
-			<AppLogo />
+			<Link
+				className="home-link"
+				to="/">
+				<AppLogo />
+			</Link>
 			<div className="btn-container">
 				{inDashboardPage ? (
 					<div className="flex align-center dash-edit-btns">
-						<button
-							className="btn btn-svg btn-edit"
-							onClick={() => setDashInEdit(!dashboardInEdit)}>
-							{dashboardInEdit ? <AiFillCheckCircle size="18px" /> : <AiFillEdit size="18px" />}
-						</button>
 						{dashboardInEdit && (
 							<button
 								className="btn btn-svg btn-add"
+								title="Add Aplication"
 								onClick={() => openModal(AddPageModal)}>
 								<HiViewGridAdd size="18px" />
 							</button>
 						)}
+						<button
+							className="btn btn-svg btn-edit"
+							title={dashboardInEdit ? 'Done' : 'Edit'}
+							onClick={() => setDashInEdit(!dashboardInEdit)}>
+							{dashboardInEdit ? <AiFillCheckCircle size="18px" /> : <AiFillEdit size="18px" />}
+						</button>
 					</div>
 				) : (
 					<Link
 						className="nav-link"
 						to="/">
-						Home
+						<div className="btn btn-svg">
+							<AiFillHome size="18px" />
+						</div>
 					</Link>
 				)}
 			</div>
