@@ -28,7 +28,7 @@ export const Layout = () => {
 			/>
 			<main>
 				<NavigationManager>
-					<Suspense fallback={<h1>Loading...</h1>}>
+					<Suspense>
 						<Outlet />
 					</Suspense>
 				</NavigationManager>

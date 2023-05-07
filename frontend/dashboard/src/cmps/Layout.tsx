@@ -9,7 +9,7 @@ export const Layout = () => {
 	return (
 		<div className="main-layout">
 			<AppHeader />
-			<Suspense fallback={<h1>Loading...</h1>}>
+			<Suspense>
 				<Outlet />
 			</Suspense>
 			<ModalDialog />

@@ -21,6 +21,6 @@ export const App = () => {
 		setUserPages(data)
 	}
 
-	if (!fetched) return <h1>loading</h1>
+	if (!fetched) return <></>
 	return <Router />
 }
