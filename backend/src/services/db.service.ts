@@ -11,11 +11,16 @@ type Data = {
 	pages: Page[]
 }
 
+type CollectionName = keyof Data
+type Item = Data[CollectionName][number]
+type ItemKey = keyof Data[CollectionName][number]
+type ItemValue = Data[CollectionName][number][ItemKey]
+
 export const dbService = {
 	getCollection
 }
 
-async function getCollection(collectionName: keyof Data) {
+async function getCollection(collectionName: CollectionName) {
 	try {
 		await connect()
 		return {
@@ -48,29 +53,29 @@ async function connect(): Promise<Low<Data>> {
 	}
 }
 
-function getAll(collectionName: keyof Data) {
+function getAll(collectionName: CollectionName) {
 	return db.data[collectionName]
 }
 
-function findOne(collectionName: keyof Data, idKey: keyof Page, idVal: Page[keyof Page]) {
+function findOne(collectionName: CollectionName, idKey: ItemKey, idVal: ItemValue) {
 	return db.data[collectionName].find((item) => item[idKey] === idVal)
 }
 
-function insertOne(collectionName: keyof Data, page: Page) {
-	// page._id = makeid() //? 👈 No need for id per assignment requirements
-	db.data[collectionName].unshift(page)
+function insertOne(collectionName: CollectionName, item: Item) {
+	// item._id = makeid() //? 👈 No need for id per assignment requirements
+	db.data[collectionName].unshift(item)
 	db.write()
 	return db.data[collectionName]
 }
 
-function updateOne(collectionName: keyof Data, idKey: keyof Page, updatedPage: Page) {
-	const itemIdx = db.data[collectionName].findIndex((item) => item[idKey] === updatedPage[idKey])
-	db.data[collectionName].splice(itemIdx, 1, updatedPage)
+function updateOne(collectionName: CollectionName, idKey: ItemKey, updatedItem: Item) {
+	const itemIdx = db.data[collectionName].findIndex((item) => item[idKey] === updatedItem[idKey])
+	db.data[collectionName].splice(itemIdx, 1, updatedItem)
 	db.write()
 	return db.data[collectionName]
 }
 
-function deleteOne(collectionName: keyof Data, idKey: keyof Page, idVal: Page[keyof Page]) {
+function deleteOne(collectionName: CollectionName, idKey: ItemKey, idVal: ItemValue) {
 	const itemIdx = db.data[collectionName].findIndex((item) => item[idKey] === idVal)
 	db.data[collectionName].splice(itemIdx, 1)
 	db.write()
