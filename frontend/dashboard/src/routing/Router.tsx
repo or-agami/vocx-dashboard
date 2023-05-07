@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { lazy } from 'react'
 import {
 	Route,
 	RouterProvider,
@@ -10,6 +10,8 @@ import { useAtomValue } from 'jotai'
 import { Layout } from '../cmps/Layout'
 import ErrorPage from '../pages/ErrorPage'
 import Dashboard from '../pages/Dashboard'
+
+const RemoteContainer = lazy(() => import('../cmps/RemoteContainer'))
 
 export function Router() {
 	const userPages = useAtomValue(pagesAtom)
@@ -33,10 +35,10 @@ export function Router() {
 								key={page.cmpName}
 								path={`${page.path}/*`}
 								element={
-									<page.cmp
-										cmpName={page.cmpName}
+									<RemoteContainer
+										remoteName={page.cmpName}
 										remotePath={page.path}
-										mount={page.mount}
+										importFunction={page.importFunction}
 									/>
 								}
 								errorElement={<ErrorPage />}

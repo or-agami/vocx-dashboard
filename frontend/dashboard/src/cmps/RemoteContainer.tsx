@@ -2,12 +2,12 @@ import React, { useEffect, useRef } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 
 type Props = {
-	cmpName: string
+	remoteName: string
 	remotePath: string
-	mount: any
+	importFunction: () => Promise<any>
 }
 
-export default ({ cmpName: remoteName, remotePath, mount }: Props) => {
+export default ({ remoteName, remotePath, importFunction }: Props) => {
 	const wrapperRef = useRef<HTMLDivElement>(null)
 	const navigate = useNavigate()
 	const location = useLocation()
@@ -42,19 +42,21 @@ export default ({ cmpName: remoteName, remotePath, mount }: Props) => {
 
 	const isFirstRunRef = useRef(true)
 	const unmountRef = useRef(() => {})
+
 	//? Mount remote MFE
 	useEffect(() => {
-		if (!isFirstRunRef.current) {
-			return
-		}
+		if (!isFirstRunRef.current) return
+		getMount()
+	}, [location])
+
+	async function getMount() {
+		const mount = await importFunction().then((module) => module.mount)
 		unmountRef.current = mount({
 			mountPoint: wrapperRef.current!,
 			initialPathname: location.pathname.replace(remotePath, '')
 		})
 		isFirstRunRef.current = false
-	}, [location])
-
-	useEffect(() => unmountRef.current, [])
+	}
 
 	return (
 		<div

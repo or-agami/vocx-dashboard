@@ -1,6 +1,5 @@
 import { availablePages } from '../pages.const'
 import { httpService } from './http.service'
-import { ComponentType, type LazyExoticComponent } from 'react'
 import { toast } from 'react-toastify'
 
 export const pagesService = {
@@ -20,8 +19,7 @@ export interface Page extends PageDes {
 	name: string
 	path: string
 	icon: string
-	mount?: () => Promise<any>
-	cmp: LazyExoticComponent<ComponentType<any>>
+	importFunction: () => Promise<any>
 }
 
 async function query() {
