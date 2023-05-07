@@ -47,7 +47,7 @@ To develop new page you need to make sure that you using `bootstrap` method and 
 
 ## Remote app
 
-> [See example](https://github.com/or-agami/vocx-dashboard/blob/main/frontend/news/src/index.ts) for `mount` function export in remote index.ts file
+> [See example](https://github.com/or-agami/vocx-dashboard/blob/eeae453e77e9603f9acbfbf38a55c70a9a7807a2/frontend/contacts/src/bootstrap.tsx#L33) for `mount` function export in remote bootstrap.tsx file
 
 ```javascript
 /* app/webpack.config.js */
@@ -66,7 +66,7 @@ new ModuleFederationPlugin({
 
 ## Host (Dashboard)
 
-> [See example](https://github.com/or-agami/vocx-dashboard/blob/fc9fba5e9cabeaa41a68ff71700a9affeba1f664/frontend/dashboard/src/pages.const.ts#L5) for `mount` function import in `dashboard/src/pages.const.ts`
+> [See example](https://github.com/or-agami/vocx-dashboard/blob/eeae453e77e9603f9acbfbf38a55c70a9a7807a2/frontend/dashboard/src/pages.const.ts#L9) for `mount` function import in `dashboard/src/pages.const.ts`
 
 ```javascript
 /* dashboard/webpack.config.js */
