@@ -14,7 +14,7 @@ interface Entity extends Object {
 	_id: string
 }
 //? set a delay for data retrive        👇
-function query(entityType: EntityType, delay = 50): Promise<Entity[]> {
+function query(entityType: EntityType, delay = 600): Promise<Entity[]> {
 	const entities = JSON.parse(localStorage.getItem(entityType)!) || []
 
 	return new Promise((resolve, _reject) => {

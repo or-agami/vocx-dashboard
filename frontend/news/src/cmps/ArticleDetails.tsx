@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { newsService, type NewsArticle } from '../news.service'
+import { newsService, type NewsArticle } from '../services/news.service'
 import { useEffect, useState } from 'react'
 
 export default function ArticleDetails() {
@@ -18,7 +18,7 @@ export default function ArticleDetails() {
 		setArticle(data)
 	}
 
-	if (!article) return <h1>Loading..</h1>
+	if (!article) return <SkeletonLoader />
 	return (
 		<article className="flex-column article-details">
 			<div className="img-container">
@@ -31,6 +31,24 @@ export default function ArticleDetails() {
 			<div className="flex-column space-between content-container">
 				<h1 className="title">{article.title}</h1>
 				<p className="content">{article.content}</p>
+			</div>
+		</article>
+	)
+}
+
+const SkeletonLoader = () => {
+	return (
+		<article className="flex-column article-details article-skeleton-loader">
+			<div className="img-container animated-background"></div>
+			<div className="flex-column space-between content-container">
+				<div className="title animated-background"></div>
+				<div>
+					<div className="content animated-background"></div>
+					<div className="content animated-background"></div>
+					<div className="content animated-background"></div>
+					<div className="content animated-background"></div>
+					<div className="content animated-background"></div>
+				</div>
 			</div>
 		</article>
 	)

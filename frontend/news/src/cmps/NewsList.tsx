@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { NewsArticle, newsService } from '../news.service'
+import { NewsArticle, newsService } from '../services/news.service'
 
 export default function NewsList({ category = 'new' }: { category?: 'saved' | 'new' | 'hot' }) {
 	const savedIds = ['12345', '24680'] //? Demo of saved articles id
@@ -30,24 +30,26 @@ export default function NewsList({ category = 'new' }: { category?: 'saved' | 'n
 				return articlesClone
 		}
 	}
-
 	return (
 		<div className="news-list">
-			<ul>
-				{articles.length > 0 &&
-					sortArticlesForDisplay().map((article) => (
+			{articles.length > 0 ? (
+				<ul>
+					{sortArticlesForDisplay().map((article) => (
 						<li
 							key={article._id}
 							className="article-preview-container">
 							<ArticlePreview article={article} />
 						</li>
 					))}
-			</ul>
+				</ul>
+			) : (
+				<SkeletonLoader />
+			)}
 		</div>
 	)
 }
 
-function ArticlePreview({ article }: { article: NewsArticle }) {
+const ArticlePreview = ({ article }: { article: NewsArticle }) => {
 	return (
 		<Link to={`../${article._id}`}>
 			<article className="flex article-preview">
@@ -64,5 +66,29 @@ function ArticlePreview({ article }: { article: NewsArticle }) {
 				</div>
 			</article>
 		</Link>
+	)
+}
+
+const SkeletonLoader = () => {
+	const loadersCount = 3
+	return (
+		<ul>
+			{[...Array(loadersCount)].map((_x, i) => (
+				<li key={i}>
+					<article className="flex article-preview article-skeleton-loader">
+						<div className="img-container animated-background"></div>
+						<div className="flex-column space-between content-container">
+							<div className="title animated-background"></div>
+							<div>
+								<div className="content animated-background"></div>
+								<div className="content animated-background"></div>
+								<div className="content animated-background"></div>
+								<div className="content animated-background"></div>
+							</div>
+						</div>
+					</article>
+				</li>
+			))}
+		</ul>
 	)
 }

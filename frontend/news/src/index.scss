@@ -48,6 +48,45 @@
       }
     }
 
+    .article-skeleton-loader {
+
+      .img-container {
+        min-height: 200px;
+      }
+
+      .content-container {
+        width: 100%;
+
+        .title {
+          min-height: 32px;
+          max-width: 220px;
+        }
+
+        .content {
+          min-height: 16px;
+          margin-bottom: 6px;
+
+          &:nth-child(2) {
+            max-width: 90%;
+          }
+
+          &:nth-child(3) {
+            max-width: 95%;
+          }
+
+          &:last-child {
+            max-width: 85%;
+          }
+        }
+
+        @for $i from 1 through 5 {
+
+          .content:nth-child(#{$i}) {
+            animation-delay: -0.1s * (5 - $i);
+          }
+        }
+      }
+    }
   }
 
   .article-details {
@@ -67,6 +106,47 @@
       .content {
         margin-inline-start: 6px;
         color: #9fa4ad;
+      }
+    }
+  }
+
+  .article-skeleton-loader {
+
+    .img-container {
+      min-height: 205px;
+    }
+
+    .content-container {
+      width: 100%;
+
+      .title {
+        min-height: 32px;
+        max-width: 220px;
+        margin-bottom: 6px;
+      }
+
+      .content {
+        min-height: 16px;
+        margin-bottom: 6px;
+
+        &:nth-child(2) {
+          max-width: 90%;
+        }
+
+        &:nth-child(3) {
+          max-width: 95%;
+        }
+
+        &:last-child {
+          max-width: 85%;
+        }
+      }
+
+      @for $i from 1 through 5 {
+
+        .content:nth-child(#{$i}) {
+          animation-delay: -0.1s * (5 - $i);
+        }
       }
     }
   }
@@ -121,6 +201,28 @@
           }
         }
       }
+    }
+  }
+
+  .animated-background {
+    animation-duration: 1.3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: listPlaceHolderShimmer;
+    animation-timing-function: linear;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right, #9fa4ad 8%, #bbbbbb 18%, #9fa4ad 33%);
+    background-size: 800px 104px;
+    position: relative;
+  }
+
+  @keyframes listPlaceHolderShimmer {
+    0% {
+      background-position: -300px 0
+    }
+
+    100% {
+      background-position: 600px 0
     }
   }
 }
