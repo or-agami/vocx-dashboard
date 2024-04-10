@@ -1,0 +1,42 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    # Files stored in `frontend` directory
+    directory: "/frontend"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "npm"
+    # Files stored in `dashboard` directory
+    directory: "/frontend/dashboard"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "npm"
+    # Files stored in `contacts` directory
+    directory: "/frontend/contacts"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "npm"
+    # Files stored in `news` directory
+    directory: "/frontend/news"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "npm"
+    # Files stored in `todo` directory
+    directory: "/frontend/todo"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "npm"
+    # Files stored in `backend` directory
+    directory: "/backend"
+    schedule:
+      interval: "weekly"
