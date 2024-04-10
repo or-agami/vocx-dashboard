@@ -1871,11 +1871,6 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-20.0.0.tgz#081d9afd28421be956c1a47ced1c9a0034b467e2"
   integrity sha512-cD2uPTDnQQCVpmRefonO98/PPijuOnnEy5oytWJFPY1N9aJCz2wJ5kSGWO+zJoed2cY2JxQh6yBuUq4vIn61hw==
 
-"@types/node@^18.16.3":
-  version "18.16.4"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.16.4.tgz#dfb38f0f3fb045fca84ffa7783233c63009d8a92"
-  integrity sha512-LUhvPmAKAbgm+p/K11IWszLZVoZDlMF4NRmqbhEzDz/CnCuehPkZXwZbBCKGJsgjnuVejotBwM7B3Scrq4EqDw==
-
 "@types/node@^20.12.7":
   version "20.12.7"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-20.12.7.tgz#04080362fa3dd6c5822061aa3124f5c152cff384"
@@ -7342,11 +7337,6 @@ strong-log-transformer@2.1.0, strong-log-transformer@^2.1.0:
     duplexer "^0.1.1"
     minimist "^1.2.0"
     through "^2.3.4"
-
-style-loader@^3.3.2:
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/style-loader/-/style-loader-3.3.2.tgz#eaebca714d9e462c19aa1e3599057bc363924899"
-  integrity sha512-RHs/vcrKdQK8wZliteNK4NKzxvLBzpuHMqYmUVWeKa6MkaIQ97ZTOS0b+zapZhy6GcrgWnvWYCMHRirC3FsUmw==
 
 style-loader@^4.0.0:
   version "4.0.0"
