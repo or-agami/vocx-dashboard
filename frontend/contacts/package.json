@@ -28,7 +28,7 @@
     "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
     "html-webpack-plugin": "^5.5.0",
-    "sass": "^1.62.1",
+    "sass": "^1.74.1",
     "sass-loader": "^13.2.2",
     "style-loader": "^4.0.0",
     "typescript": "^5.0.4",
