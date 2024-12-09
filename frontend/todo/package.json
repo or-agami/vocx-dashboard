@@ -11,7 +11,7 @@
     "start:live": "webpack serve --mode development --live-reload --hot"
   },
   "dependencies": {
-    "react": "^18.2.0",
+    "react": "^19.0.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
     "react-router-dom": "^6.11.0"
